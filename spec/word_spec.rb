@@ -13,6 +13,20 @@ describe(Word) do
     end
   end
 
+  describe('#id') do
+    it('returns the id of the word') do
+      test_dealership = Word.new("bug")
+      expect(test_dealership.id()).to(eq(1))
+    end
+  end
+
+  describe('#definitions') do
+    it('initially returns an empty array of definitions associated with one word') do
+      test_word = Word.new("bug")
+      expect(test_word.definitions()).to(eq([]))
+    end
+  end
+
   describe('#save') do
     it('adds a word to an array of words') do
       test_word = Word.new("bug")
