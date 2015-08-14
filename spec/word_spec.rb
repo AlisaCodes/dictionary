@@ -1,5 +1,6 @@
 require('rspec')
 require('word')
+# require('definition')
 
 describe(Word) do
   before() do
@@ -38,6 +39,15 @@ describe(Word) do
   describe('.all') do
     it('begins empty') do
       expect(Word.all()).to(eq([]))
+    end
+  end
+
+  describe('#add_def') do
+    it('adds a definition to definitions array') do
+      test_word = Word.new("bug")
+      test_definition = Definition.new("a freaking problem", "a nuisance", "a virus")
+      test_word.add_def(test_definition)
+      expect(test_word.definitions()).to(eq([test_definition]))
     end
   end
 

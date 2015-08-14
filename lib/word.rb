@@ -30,4 +30,8 @@ class Word
   define_method(:definitions) do
     @definitions
   end
+
+  define_method(:add_def) do |definition|
+    @definitions.push(definition)
+  end
 end
