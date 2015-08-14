@@ -1,6 +1,6 @@
 require('rspec')
 require('word')
-# require('definition')
+require('definition')
 
 describe(Word) do
   before() do
@@ -50,5 +50,9 @@ describe(Word) do
       expect(test_word.definitions()).to(eq([test_definition]))
     end
   end
+
+  # describe('.find') do
+  #   it('returns a word by its id number') do
+  #     test_word... i don't need this...
 
 end
