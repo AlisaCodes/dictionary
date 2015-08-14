@@ -30,6 +30,4 @@ class Definition
   define_singleton_method(:all) do
     @@all_definitions
   end
-
-
 end
